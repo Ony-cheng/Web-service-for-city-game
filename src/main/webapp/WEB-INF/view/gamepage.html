@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <style>
+        h1 {
+            padding-top: 50px;
+            font-size: 25px;
+            font-family: Verdana;
+            color: white;
+        }
+
+        form {
+            font-family: Verdana;
+            color: white;
+        }
+
+        p {
+            font-family: Verdana;
+            color: white;
+            font-size: medium;
+        }
+
+        body {
+            background-image: url("static/backimagecity.jpg");
+        }
+    </style>
+<!--    <meta charset="ISO-8859-1">-->
+<!--        <meta charset="UTF-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Cities</title>
+</head>
+<body>
+<h1>LETS PLAY A FUCKIN GAME</h1>
+<p>Гей</p>
+
+<form th:method="GET" th:action="@{/game}" th:object="${city}">
+    <label for="title">Enter your damn city name and make your move</label>
+    <input type="text" th:field="*{title}" id="title" value=""/>
+    <input type="submit" value="get city"/>
+</form>
+</div>
+<div th:utext="${city.getTitle()}"> Test! </div>
+<br>
+<p th:text="${message}">Valor</p>
+
+
+</body>
+</html>
